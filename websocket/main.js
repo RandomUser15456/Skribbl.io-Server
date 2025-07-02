@@ -2,37 +2,8 @@
 
 const WebSocket = require('ws');
 const words = require("./words.json");
-
-/*
-0 -> {
-    "sid": "Ga-byjigiD3HL6oJAjtw",
-    "upgrades": [],
-    "pingInterval": 5000,
-    "pingTimeout": 20000,
-    "maxPayload": 81920
-}
-
-40 -> {
-    "sid": "py5jGPEqDXHAmhdbAjty"
-}
-
-42 -> [
-    "login",
-    {
-        "join": "",
-        "create": 0,
-        "name": "oka",
-        "lang": "0",
-        "avatar": [
-            1,
-            6,
-            43,
-            -1
-        ]
-    }
-]
-*/
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
 function RandomStr(length = 8) {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
